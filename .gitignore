@@ -1,0 +1,44 @@
+# phpstorm 项目文件
+.idea
+
+# vs code 项目文件
+.vscode
+
+# netbeans 项目文件
+nbproject
+
+# zend studio for eclipse 项目文件
+.buildpath
+.project
+.settings
+
+# windows 缩略图换成
+Thumbs.db
+
+# composer 供应商目录
+/vendor/*
+
+# scss 编译后文件
+*.css.map
+
+# composer 它本身是不需要的（客户端自行升级最新版）
+composer.phar
+
+# Mac DS_Store 文件
+.DS_Store
+
+# phpunit 它本身是不需要的
+phpunit.phar
+# 本地 phpunit 配置文件
+/phpunit.xml
+
+/docker-compose.yml
+/supervisord.log
+/supervisord.pid
+
+# install lock file
+install.lock
+
+# npm
+node_modules/
+
