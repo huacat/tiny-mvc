@@ -1,5 +1,5 @@
 <?php
-return [
+$conf = [
     'driver'    => 'mysql',
     'host'      => 'localhost',
     'database'  => 'test',
@@ -9,3 +9,5 @@ return [
     'collation' => 'utf8_general_ci',
     'prefix'    => ''
 ];
+
+return file_exists($local = __DIR__.'/database-local.php') ? array_merge($conf, include $local) : $conf;

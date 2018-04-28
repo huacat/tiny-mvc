@@ -42,3 +42,6 @@ install.lock
 # npm
 node_modules/
 
+# local file
+/config/*-local.php
+
