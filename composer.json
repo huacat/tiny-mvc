@@ -5,7 +5,8 @@
     "require": {
         "noahbuscher/macaw": "dev-master",
         "illuminate/database": "5.6.*",
-        "filp/whoops": "2.1.*"
+        "filp/whoops": "2.1.*",
+        "nette/mail": "2.4.*"
     },
     "license": "Apache-2.0",
     "authors": [
