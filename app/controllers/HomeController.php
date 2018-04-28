@@ -3,7 +3,9 @@
 class HomeController extends BaseController{
 
     public function home(){
-        $article = Article::first();
-        require dirname(__FILE__).'/../views/home.php';
+        $this->view = View::make('home')
+            ->with('article',Article::first())
+            ->withTitle('tiny-mvc');
+
     }
 }
