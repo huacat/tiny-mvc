@@ -1,6 +1,6 @@
 {
-    "name": "eutils/test",
-    "description": "description",
+    "name": "huacat/tiny-mvc",
+    "description": "mvc framework",
     "type": "project",
     "require": {
         "noahbuscher/macaw": "dev-master",
@@ -17,10 +17,9 @@
         }
     ],
     "autoload": {
-        "classmap": [
-            "app/controllers",
-            "app/models",
-            "services"
-        ]
+        "psr-4": {
+            "app\\": "app",
+            "services\\": "services"
+        }
     }
 }

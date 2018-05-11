@@ -1,4 +1,5 @@
 <?php
+namespace services;
 
 use Predis\Client;
 
@@ -26,7 +27,7 @@ class Redis{
                 case 'ms':
                     break;
                 default:
-                    throw new InvalidArgumentException('单位只能是 h m s ms');
+                    throw new \InvalidArgumentException('单位只能是 h m s ms');
                     break;
             }
             if($unit=='ms'){
