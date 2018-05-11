@@ -1,4 +1,6 @@
 <?php
+namespace services;
+
 use Nette\Mail\Message;
 
 class Mail extends Message{
@@ -27,7 +29,7 @@ class Mail extends Message{
 
     public function from($from=null){
         if(!$from){
-            throw new InvalidArgumentException("邮件发送地址不能为空！");
+            throw new \InvalidArgumentException("邮件发送地址不能为空！");
         }
         $this->setFrom($from);
         return $this;
@@ -35,14 +37,14 @@ class Mail extends Message{
 
     public static function to($to=null){
         if(!$to){
-            throw new InvalidArgumentException("邮件接收地址不能为空！");
+            throw new \InvalidArgumentException("邮件接收地址不能为空！");
         }
         return new Mail($to);
     }
 
     public function title($title=null){
         if(!$title){
-            throw new InvalidArgumentException("邮件标题不能为空！");
+            throw new \InvalidArgumentException("邮件标题不能为空！");
         }
         $this->setSubject($title);
         return $this;
@@ -50,7 +52,7 @@ class Mail extends Message{
 
     public function content($content=null){
         if(!$content){
-            throw new InvalidArgumentException("邮件内容不能为空！");
+            throw new \InvalidArgumentException("邮件内容不能为空！");
         }
         $this->setHTMLBody($content);
         return $this;
